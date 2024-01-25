@@ -9,6 +9,9 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 
+import Display from './assets/Display/Display.jsx'
+import Profile from './assets/Profile/Profile.jsx'
+
 const client = new ApolloClient({
   uri: 'http://localhost:3001/',
   cache: new InMemoryCache(),
@@ -23,7 +26,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomeDefault />,
+        element: <Display />,
+      },
+      {
+        path: "Profile",
+        element: <Profile/>,
       },
     ],
   },

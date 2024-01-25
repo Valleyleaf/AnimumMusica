@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom';
 import './App.css'
-import {Header, Footer} from './assets/'
+import Header from './assets/Header/Header'
+import Navbar from './assets/Navbar/Navbar'
+import Footer from './assets/Footer/Footer'
 
 
 function App() {
@@ -9,11 +11,10 @@ function App() {
 
   return (
     <>
-    <div>
         <Header />
+        <Navbar />
         <Outlet />
         <Footer />
-    </div>
     </>
   )
 }
