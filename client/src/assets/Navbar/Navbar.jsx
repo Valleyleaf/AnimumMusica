@@ -1,22 +1,25 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import image from "../../assets/react.svg";
 import './css/navbar.css';
+import {
+  handleMoodClick,
+  handleGenreClick,
+  handleWeatherClick,
+  handleHistoryClick,
+} from './scripts/navbar'
 
 const Navbar = () => {
-  const handleButtonClick = (buttonName) => {
-    console.log(buttonName);
-  };
 
   return (
     <div className="navbar">
-      <button onClick={() => handleButtonClick('Mood')}>Mood</button>
-      <button onClick={() => handleButtonClick('Genre')}>Genre</button>
-      <button onClick={() => handleButtonClick('Weather')}>Weather</button>
-      <button onClick={() => handleButtonClick('History')}>History</button>
+      <button onClick={handleMoodClick}>Mood</button>
+      <button onClick={handleGenreClick}>Genre</button>
+      <button onClick={handleWeatherClick}>Weather</button>
+      <button onClick={handleHistoryClick}>History</button>
     </div>
   );
 };
+//Button onClick leads to scripts/navbar.js
 
 Navbar.propTypes = {
   onButtonClick: PropTypes.func.isRequired,

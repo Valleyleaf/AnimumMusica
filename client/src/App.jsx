@@ -8,11 +8,15 @@ import Footer from './assets/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
+  
+  const handleButtonClick = (buttonName) => {
+    console.log(buttonName);
 
+  };
   return (
     <>
         <Header />
-        <Navbar />
+        <Navbar onButtonClick={handleButtonClick}/>
         <Outlet />
         <Footer />
     </>
