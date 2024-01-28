@@ -11,6 +11,7 @@ import {
 
 import Display from './assets/Display/Display.jsx'
 import Profile from './assets/Profile/Profile.jsx'
+import Weather from './assets/Weather/Weather.jsx'
 
 const client = new ApolloClient({
   uri: 'http://localhost:3001/',
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Display />,
+      },
+      {
+        index: true,
+        element: <Weather />,
       },
       {
         path: "Profile",

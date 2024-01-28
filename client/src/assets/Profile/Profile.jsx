@@ -4,7 +4,7 @@ import './profile.css';
 
 export default function Header() {
   return (
-    <div className="BoxSize">
+    <div className="BoxSizeProfile">
       <p>Profile</p>
     </div>
   );

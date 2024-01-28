@@ -1,16 +1,25 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import image from "../../assets/react.svg";
-import './navbar.css';
+import './css/navbar.css';
 
-export default function Header() {
+const Navbar = () => {
+  const handleButtonClick = (buttonName) => {
+    console.log(buttonName);
+  };
+
   return (
-    <>
-      <nav>
-        <button>Button1</button>
-        <button>Button2</button>
-        <button>Button3</button>
-        <button>Button4</button>
-      </nav>
-    </>
+    <div className="navbar">
+      <button onClick={() => handleButtonClick('Mood')}>Mood</button>
+      <button onClick={() => handleButtonClick('Genre')}>Genre</button>
+      <button onClick={() => handleButtonClick('Weather')}>Weather</button>
+      <button onClick={() => handleButtonClick('History')}>History</button>
+    </div>
   );
-}
+};
+
+Navbar.propTypes = {
+  onButtonClick: PropTypes.func.isRequired,
+};
+
+export default Navbar;
